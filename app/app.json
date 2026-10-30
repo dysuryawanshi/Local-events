@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Local Events",
+    "slug": "local-events",
+    "scheme": "localevents",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.nyravi.localevents",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "Local Events adds the events you choose to your calendar.",
+        "NSCalendarsWriteOnlyAccessUsageDescription": "Local Events adds the events you choose to your calendar."
+      }
+    },
+    "android": {
+      "package": "com.nyravi.localevents",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#14213D"
+      },
+      "permissions": [
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-asset",
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#14213D"
+        }
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Local Events adds the events you choose to your calendar."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
